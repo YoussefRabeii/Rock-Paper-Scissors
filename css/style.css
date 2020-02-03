@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+:root {
+    --dark: #333;
+    --win: #28a745;
+    --lose: #dc3545;
+    --light: #f4f4f4;
+    --primary: #003699;
+    --background: black;
+    --modal-duration: 1s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color:#333;
+    line-height: 1.6;
+    text-align: center;
+    background-color: #e6e6e6;
+    font-family: "Roboto", sans-serif;
+}
+
+.title {
+    color: white;
+    padding: 1.5rem;
+    background-color: var(--background);
+}
+
+.container {
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+    max-width: 1100px;
+    text-align: center;
+}
+
+header {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.restart-btn {
+    border: none;
+    outline: none;
+    display: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--dark);
+    padding: 0.4rem 1.3rem;
+    margin-block-end: 1rem;
+    background: var(--light);
+}
+
+.restart-btn:hover {
+    color: white;
+    background: var(--primary);
+}
+
+.score {
+    display: grid;
+    color: white;
+    font-size:  1.2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.score p:first-child {
+    background: var(--primary);
+}
+
+.score p:last-child {
+    background: var(--dark);
+}
+
+.choices {
+    display: grid;
+    grid-gap:  2rem;
+    text-align: center;
+    margin-block-start: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.choice {
+    cursor: pointer;
+}
+
+.fas {
+    font-size: 170px;
+}
+
+.choice:hover {
+    color: var(--primary);
+}
+
+.text-win {
+    color: var(--win);
+}
+
+.text-lose {
+    color: var(--lose);
+}
+
+
+footer {
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 2;
+    height: 20vh;
+    padding: 25px;
+    color: white;
+    position:fixed;
+    text-align: center;
+    background-color: var(--background);
+}
+
+footer i, footer p {
+    font-size: 1.3rem;
+    display: inline-block;
+    margin-block-end: 25px;
+    margin-inline-start: 10px;
+}
+
+footer i {
+    font-size: 1.2rem;
+}
+
+footer h6 {
+    font-size: 0.8rem;
+    font-weight: lighter;
+}
+
+@media (max-width: 700px) {
+    .choice {
+        font-size: 110px;
+    }
+}
+
+@media (max-width: 500px) {
+    .choice {
+        font-size: 80px;
+    }
+}

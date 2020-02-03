@@ -1,0 +1,51 @@
+:root {
+    --dark: #333;
+    --win: #28a745;
+    --lose: #dc3545;
+    --light: #f4f4f4;
+    --primary: #003699;
+    --modal-duration: 0.5s;
+}
+
+.modal {
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: auto;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    width:350px;
+    padding: 3rem;
+    margin: 10% auto;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    animation-name: modalOpen;
+    animation-duration: var(--modal-duration);
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+.modal-content h1 {
+    margin-block-end: 1rem;
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    margin-block-start: 1rem;
+}
+
+@keyframes modalOpen{
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1s;
+    }
+}
